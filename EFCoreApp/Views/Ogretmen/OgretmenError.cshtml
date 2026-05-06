@@ -1,0 +1,26 @@
+﻿@model Ogretmen
+@{
+    ViewData["Title"] = "OgretmenError";
+}
+<div class="row">
+    <div class="col-md-8">
+        <h4>Hata</h4>
+        <hr />
+        <p>
+            <b>@Model.AdSoyad</b> isimli öğretmenin @Model.Kurslar.Count adet kursta ders vermektedir. Lütfen kurs kayıtlarını silip, daha sonra tekrar deneyiniz.
+
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h4>Kurslar</h4>
+        <hr />
+        <ul>
+            @foreach(var item in Model.Kurslar)
+            {
+                <li>@item.Baslik</li>
+            }
+        </ul>
+    </div>
+
+</div>
+

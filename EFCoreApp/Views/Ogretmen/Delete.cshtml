@@ -1,0 +1,13 @@
+﻿@model Ogretmen
+@{
+    ViewData["Title"] = "Delete";
+}
+<p>
+    <b>@Model.AdSoyad</b> isimli öğretmeni silmek istiyor musunuz?
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="OgretmenId" />
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-action="Index" class="btn btn-primary">Hayır</a>
+    </form>
+</p>
+
